@@ -15,3 +15,5 @@ Website documentation: https://docs.aimlapi.com/api-references/image-models/open
 Tip: you have to create account for aimlapi and api key that you will use inside the project. Free plan you can generate 20 image per day only.
 
 ![Screenshot](examples/example-1.png)
+
+![Screenshot](examples/example-2.png)
