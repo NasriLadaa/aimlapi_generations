@@ -16,7 +16,7 @@ def gen_img():
     api_key = '05a631026aba427880be35523ae83a46'
     response = requests.post("https://api.aimlapi.com/v1/images/generations",
     headers={
-        "Authorization": "Bearer "+api_key,
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     },
     json={  # Use 'json' instead of 'data' for proper JSON handling
@@ -34,6 +34,15 @@ def gen_img():
     print(image_url)
 
     return render_template('index.html', image_url=image_url)
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("error.html", error="Page not found (404)")
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("error.html", error="Internal server error (500)")
 
 if __name__ == "__main__":
     app.run(debug=True)
