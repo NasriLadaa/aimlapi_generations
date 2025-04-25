@@ -15,14 +15,15 @@
             <form action="/gen_image" method="post">
                 <label for="command-prompt-gen">Enter the text you would like to use to generate an image.</label>
                 <br>
-                <input type="text" name="command-prompt-txt" id="command-prompt-txt">
+                <input type="text" name="command-prompt-txt" id="command-prompt-txt" size="60">
+                <br>
                 <input type="submit" value="Generate">
             </form>
         </div>
         <div class="right-div">
             {% if image_url %}
             <h2>Generated Image:</h2>
-            <img src="{{ image_url }}" alt="Generated Image" style="max-width: 100%; height: auto;">
+            <img src="{{ image_url }}" alt="Generated Image" >
         {% endif %}
         </div>
     </div>
