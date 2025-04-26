@@ -10,6 +10,10 @@ Flask framework project integrating Generative AI for images and videos.
   pip install requests
 </pre>
 
+## To check flask downloaded version (on windows command prompt or git bash)
+<pre>
+  flask --version
+</pre>
 Website documentation: https://docs.aimlapi.com/api-references/image-models/openai/dall-e-3
 
 Tip: you have to create account for aimlapi and api key that you will use inside the project. Free plan you can generate 20 image per day only.
